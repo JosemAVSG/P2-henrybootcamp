@@ -1,0 +1,35 @@
+:root {
+    --primary: rgba(38, 76, 124, 0.815);
+    --secondary: rgba(35, 41, 48, 0.815);
+  }
+
+
+.feature{
+    margin-bottom: 10px;
+    padding: 20px;
+    border-radius: 5px;
+    display: flex;
+    background:  var(--primary);
+    color: #ccc;
+}
+.feature-raw{
+    margin-bottom: 10px;
+    padding: 20px;
+    border-radius: 5px;
+    display: flex;
+    flex-direction: row-reverse;
+    background:  var(--secondary);
+    color: #ccc; 
+}
+.feature-raw .text{
+    display: flex;
+    flex-direction: column;
+    justify-self: flex-end;
+    margin: 30px;
+}
+.feature .text{
+    display: flex;
+    flex-direction: column;
+    justify-self: flex-end;
+    margin: 30px;
+}
