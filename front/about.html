@@ -13,6 +13,7 @@
       rel="stylesheet"
       href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css"
     />
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
     <link rel="stylesheet" href="./css/reset.css" />
     <link rel="stylesheet" href="./css/global.css" />
     <title>MovieApp</title>
@@ -22,11 +23,13 @@
       <div>
         <h1>Pelisflow</h1>
       </div>
-      <nav>
-        <ul>
+      <button id="abrir" class="open-hamburger"><i class="bi bi-list"></i></button>
+      <nav  class="nav" id="nav">
+        <button id="cerrar" class="close-hamburger"><i class="bi bi-x-lg"></i></button>
+        <ul class="nav-list">
           <li><a href="/#">Inicio </a></li>
           <li><a href="./historia.html">Historia Del Cine</a></li>
-          <li><a href="./about">Acerca de mi</a></li>
+          <li><a href="./about.html">Acerca de mi</a></li>
           <li><a href="./series.html">Series</a></li>
         </ul>
       </nav>
@@ -40,7 +43,7 @@
         <h1>Sobre Mí</h1>
         <div class="imgen">
           <img
-            src="./public/20200529_204110.jpg"
+            src="./public/20200529_204110.webp"
             width="300px"
             height="300px"
           />
@@ -63,7 +66,7 @@
               <div class="img">
                 <img
                   class="skill-icon"
-                  src="./public/js.png"
+                  src="./public/js.webp"
                   alt="Javascript"
                 />
               </div>
@@ -73,7 +76,7 @@
           <div class="skill-box">
             <div class="skill-title">
               <div class="img">
-                <img class="skill-icon" src="./public/html.png" alt="Html" />
+                <img class="skill-icon" src="./public/html.webp" alt="Html" antialiased />
               </div>
               <h3>HTML5</h3>
             </div>
@@ -83,8 +86,9 @@
               <div class="img">
                 <img
                   class="skill-icon css"
-                  src="./public/CSS3.png"
+                  src="./public/CSS3.webp"
                   alt="CSS3"
+                  antialiased
                 />
               </div>
               <h3>CSS3</h3>
@@ -95,7 +99,7 @@
               <div class="img">
                 <img
                   class="skill-icon"
-                  src="./public/ogo-react-js.png"
+                  src="./public/ogo-react-js.webp"
                   alt="React"
                 />
               </div>
@@ -107,7 +111,7 @@
               <div class="img">
                 <img
                   class="skill-icon"
-                  src="./public/mongo.png"
+                  src="./public/mongo.webp"
                   alt="MongoDb"
                 />
               </div>
@@ -117,7 +121,7 @@
           <div class="skill-box">
             <div class="skill-title">
               <div class="img">
-                <img class="skill-icon" src="./public/mysql.png" alt="Mysql" />
+                <img class="skill-icon" src="./public/mysql.webp" alt="Mysql" />
               </div>
               <h3>Mysql</h3>
             </div>
@@ -127,7 +131,7 @@
               <div class="img">
                 <img
                   class="skill-icon"
-                  src="./public/boostrap.png"
+                  src="./public/boostrap.webp"
                   alt="boostrap"
                 />
               </div>
@@ -137,7 +141,7 @@
           <div class="skill-box">
             <div class="skill-title">
               <div class="img">
-                <img class="skill-icon" src="./public/Redux.png" alt="redux" />
+                <img class="skill-icon" src="./public/Redux.webp" alt="redux" />
               </div>
               <h3>Redux</h3>
             </div>
@@ -145,7 +149,7 @@
           <div class="skill-box">
             <div class="skill-title">
               <div class="img">
-                <img class="skill-icon" src="./public/node.png" alt="node" />
+                <img class="skill-icon" src="./public/node.webp" alt="node" />
               </div>
               <h3>Node Js</h3>
             </div>
@@ -153,7 +157,7 @@
           <div class="skill-box">
             <div class="skill-title">
               <div class="img">
-                <img class="skill-icon" src="./public/sass.png" alt="sass" />
+                <img class="skill-icon" src="./public/sass.webp" alt="sass" />
               </div>
               <h3>Sass</h3>
             </div>
@@ -181,5 +185,6 @@
     <footer>
       <span> Coded with ❤ by Jose Miguel</span>
     </footer>
+    <script type="module" src="./scripts/index.js"></script>
   </body>
 </html>

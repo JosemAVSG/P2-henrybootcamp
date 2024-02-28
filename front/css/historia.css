@@ -33,3 +33,20 @@
     justify-self: flex-end;
     margin: 30px;
 }
+
+@media screen and (max-width: 650px) {
+    .feature{
+        flex-direction: column;
+    }
+    .feature div{
+        display: flex;
+        justify-content: center;
+    }
+    .feature-raw{
+        flex-direction: column;
+    }
+    .feature-raw div{
+        display: flex;
+        justify-content: center;
+    }
+  }

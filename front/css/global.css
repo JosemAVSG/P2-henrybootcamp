@@ -255,6 +255,10 @@ nav a:hover:after {
 .nombre{
   font-size: x-large;
 }
+.open-hamburger,
+.close-hamburger{
+  display: none;
+}
 footer {
   display: flex;
   padding: 10px 0;
@@ -271,5 +275,48 @@ footer {
 @media screen and (max-width: 650px) {
   #board {
     grid-template-columns: 1fr;
+  }
+  .open-hamburger,
+  .close-hamburger{
+    display:block;
+    background: transparent;
+    color: #ccc;
+    padding: 2px;
+    margin: 5px;
+    border: 0;
+    font-size: 2.0rem;
+  }
+ .hidden{
+    visibility: hidden;
+  }
+  .nav{
+    opacity: 0;
+    visibility: hidden;
+
+    display: flex;
+    flex-direction: column;
+    align-items: end;
+    box-shadow: 0 0 0 100vmax rgba(0, 0, 0, 0.7);
+    position: absolute;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    background-color: var(--primary);
+    padding: 2rem;
+  }
+  .nav.visible{
+    opacity: 1;
+    visibility: visible;
+  }
+  .nav-list{
+    flex-direction: column;
+    align-items: end;
+    gap: 2rem;
+  }
+  .search{
+    display: none;
+  }
+  .container-skill{
+    grid-template-columns: repeat(2, 1fr);
   }
 }
