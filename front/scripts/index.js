@@ -8,6 +8,38 @@ function buscar() {
   console.log(busqueda);
 }
 
+// const renderMoviesAjax = () => {
+//   $.get("https://students-api.2.us-1.fl0.io/movies",(data,status)=>{
+//   console.log(data);
+//   console.log(status);
+//   if(status === "success"){
+//      data.forEach((pelicula) => {
+
+//     var anchor = document.createElement("a");
+//     anchor.setAttribute("href", "#");
+//     var card = document.createElement("div");
+//     card.classList.add("card");
+
+//     card.innerHTML = `
+//             <img src=${pelicula.poster}></>
+//              <h2>${pelicula.title}</h2>
+//              <div>
+//              <p><strong>Director:</strong> ${pelicula.director}</p>
+//              <p><strong>Año:</strong> ${pelicula.year}</p>
+//              <p><strong>Rate:</strong> ${pelicula.rate}/10</p>
+//              <p><strong>Genero:</strong> ${pelicula.genre}</p>
+//              <p><strong>Duracion:</strong> ${pelicula.duration}</p>
+//              </div>
+//         `;
+//     anchor.appendChild(card);
+//     board.appendChild(anchor);
+//   }); 
+//   }else{
+//     throw new Error("No se puedieron encontrar los datos")
+//   }
+//  })
+//        };
+
 const renderMovies = () => {
   tempData.forEach((pelicula) => {
     var anchor = document.createElement("a");
