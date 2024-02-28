@@ -90,7 +90,6 @@ nav a:hover:after {
   background: var(--seconday);
 }
 .card {
-  display: flex;
   position: relative;
   width: 285px;
   min-height: 285px;
@@ -261,16 +260,4 @@ footer {
   padding: 10px 0;
   justify-content: center;
   background-color: rgba(38, 76, 124, 0.815);
-}
-@media screen and (max-width: 990px) {
-  #board {
-    grid-template-columns: repeat(2, 1fr);
-    padding: 2rem 50px;
-  }
-
-}
-@media screen and (max-width: 650px) {
-  #board {
-    grid-template-columns: 1fr;
-  }
 }
