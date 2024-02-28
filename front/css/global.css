@@ -44,7 +44,7 @@ li {
   margin-left: 10px;
   margin-right: 10px;
 }
-a {
+nav a {
   text-decoration: none;
   margin-left: 10px;
   margin-right: 10px;
@@ -53,10 +53,10 @@ a {
 
   font-size: 20px;
 }
-a:hover {
+nav a:hover {
   color: var(--seconday);
 }
-a:after {
+nav a:after {
   content: "";
   position: absolute;
   background-color: #dbdce6;
@@ -66,7 +66,7 @@ a:after {
   bottom: -10px;
   transition: all 0.5s ease-in-out;
 }
-a:hover:after {
+nav a:hover:after {
   width: 100%;
 }
 .search {
@@ -86,6 +86,9 @@ a:hover:after {
   justify-items: center;
   align-items: center;
 }
+#board a:hover{
+  background: var(--seconday);
+}
 .card {
   position: relative;
   width: 285px;
@@ -98,21 +101,20 @@ a:hover:after {
   cursor: pointer;
 }
 .card h2 {
-  position: absolute; /* Establece el texto como posición absoluta */
+  position: absolute;
   width: 100%;
-  top: 5%; /* Lo posiciona en la mitad superior del contenedor */
-  left: 50%; /* Lo posiciona en el centro del contenedor */
-  
-  transform: translate(-50%, -50%); /* Lo centra vertical y horizontalmente */
-  background-color: rgba(0, 0, 0, 0.5); /* Color de fondo del texto */
-  color: white; /* Color del texto */
-  opacity: 1; /* Oculta el texto inicialmente */
-  transition: opacity 0.3s; /* Agrega una transición suave */
+  top: 10%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  background-color: rgba(0, 0, 0, 0.5);
+  color: white;
+  opacity: 1;
+  transition: opacity 0.3s;
 }
 
 .card p {
   padding: 15px;
-  margin: -5px
+  margin: -5px;
 }
 .card img {
   width: 100%;
@@ -134,7 +136,7 @@ a:hover:after {
   color: white;
   border-radius: 6px;
   width: 22.33em;
-  height: 12.33em;
+  height: 14.33em;
 }
 
 .titles {
@@ -146,11 +148,11 @@ a:hover:after {
   transition: 1s ease-in-out;
   visibility: visible;
 }
-.imgen{
-  display:flex;
+.imgen {
+  display: flex;
   justify-content: center;
 }
-.imgen img{
+.imgen img {
   border-radius: 1000px;
   object-fit: cover;
   width: 365px;
@@ -240,15 +242,18 @@ a:hover:after {
   width: 75px;
   height: 75px;
 }
-.contacto{
+.contacto {
   font-size: x-large;
 }
-.contacto a{
+.contacto a {
   color: var(--primary);
   font-size: 30px;
 }
-.contacto a:hover{
+.contacto a:hover {
   color: black;
+}
+.nombre{
+  font-size: x-large;
 }
 footer {
   display: flex;
