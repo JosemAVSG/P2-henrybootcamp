@@ -1,6 +1,6 @@
 const dbConnect = require("./src/db");
 const app = require("./src/server");
-const PORT = 3000;
+const PORT = process.env.PORT || 8080;
 
 dbConnect();
 app.listen(PORT,()=>{
