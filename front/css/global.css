@@ -4,11 +4,19 @@
 }
 
 body {
+  width: 100vw;
   font-family: "Roboto Slab", serif;
   font-optical-sizing: auto;
   font-weight: 400;
   font-style: normal;
   background: #ccc;
+}
+h1 {
+  color: var(--seconday);
+  font-weight: bold;
+}
+h2 {
+  font-size: 25px;
 }
 main {
   flex-direction: row-reverse;
@@ -18,7 +26,9 @@ main {
 }
 .content {
   display: flex;
+  flex-direction: column;
   justify-content: center;
+  overflow-x: hidden;
 }
 header {
   display: flex;
@@ -50,8 +60,7 @@ nav a {
   margin-right: 10px;
   position: relative;
   color: #fff;
-
-  font-size: 20px;
+  font-size: 18px;
 }
 nav a:hover {
   color: var(--seconday);
@@ -80,15 +89,25 @@ nav a:hover:after {
   padding: 0.25rem 1rem;
   border-radius: 2rem;
 }
-#board {
+#board, #mongo, #server, #backend{
   display: grid;
   grid-template-columns: repeat(3, 1fr);
   justify-items: center;
   align-items: center;
 }
-#board a:hover{
+#board a:hover {
   background: var(--seconday);
 }
+#mongo a:hover {
+  background: var(--seconday);
+}
+#server a:hover {
+  background: var(--seconday);
+}
+#backend a:hover {
+  background: var(--seconday);
+}
+
 .card {
   position: relative;
   width: 285px;
@@ -128,8 +147,8 @@ nav a:hover:after {
   display: flex;
   flex-direction: column;
   position: absolute;
-  left: 50%;
-  top: 40%;
+  left: -10%;
+  top: 30%;
   margin: 0;
   z-index: 9999;
   background-color: var(--primary);
@@ -139,10 +158,6 @@ nav a:hover:after {
   height: 14.33em;
 }
 
-.titles {
-  display: flex;
-  justify-content: space-between;
-}
 .card:hover > div {
   transform: scale(1.09);
   transition: 1s ease-in-out;
@@ -252,12 +267,15 @@ nav a:hover:after {
 .contacto a:hover {
   color: black;
 }
-.nombre{
+.nombre {
   font-size: x-large;
 }
 .open-hamburger,
-.close-hamburger{
+.close-hamburger {
   display: none;
+}
+.banner {
+  padding: 20px;
 }
 footer {
   display: flex;
@@ -265,31 +283,33 @@ footer {
   justify-content: center;
   background-color: rgba(38, 76, 124, 0.815);
 }
+
 @media screen and (max-width: 990px) {
-  #board {
+  #board, #mongo, #server, #backend {
     grid-template-columns: repeat(2, 1fr);
     padding: 2rem 50px;
   }
 
+ 
 }
 @media screen and (max-width: 650px) {
-  #board {
+  #board, #mongo, #server, #backend {
     grid-template-columns: 1fr;
   }
   .open-hamburger,
-  .close-hamburger{
-    display:block;
+  .close-hamburger {
+    display: block;
     background: transparent;
     color: #ccc;
     padding: 2px;
     margin: 5px;
     border: 0;
-    font-size: 2.0rem;
+    font-size: 2rem;
   }
- .hidden{
+  .hidden {
     visibility: hidden;
   }
-  .nav{
+  .nav {
     opacity: 0;
     visibility: hidden;
 
@@ -304,19 +324,19 @@ footer {
     background-color: var(--primary);
     padding: 2rem;
   }
-  .nav.visible{
+  .nav.visible {
     opacity: 1;
     visibility: visible;
   }
-  .nav-list{
+  .nav-list {
     flex-direction: column;
     align-items: end;
     gap: 2rem;
   }
-  .search{
+  .search {
     display: none;
   }
-  .container-skill{
+  .container-skill {
     grid-template-columns: repeat(2, 1fr);
   }
 }

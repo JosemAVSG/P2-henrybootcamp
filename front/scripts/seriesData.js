@@ -61,4 +61,4 @@ const series = [
     }
   ];
   
- export default series;
+module.exports=series;
