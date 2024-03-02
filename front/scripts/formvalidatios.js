@@ -24,7 +24,7 @@ function formulario() {
             
             try {
                 console.log('Enviando datos al servidor...');
-                const response = await axios.post('http://localhost:3000/moviesDb', {
+                const response = await axios.post('https://p2-henrybootcamp-production.up.railway.app/moviesDb', {
                     title,
                     year,
                     director,
