@@ -10,4 +10,4 @@ const zodMovieSchema = z.object({
     poster: z.string(),
 })
 
-module.exports = zodMovieSchema
+module.exports = {zodMovieSchema}
