@@ -4,7 +4,7 @@ const mongo = d.getElementById("mongo");
 
 const renderDataMongo = async () => {
 
-  const data =  await fetch.fetchData("https://p2-henrybootcamp-production.up.railway.app/moviesDb");
+  const data =  await fetch.fetchData("https://fancy-cummerbund-jay.cyclic.app/moviesDb");
  
   data.forEach((pelicula) => {
     var anchor = d.createElement("a");

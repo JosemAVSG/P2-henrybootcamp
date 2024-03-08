@@ -4,7 +4,7 @@ const backend = d.getElementById("backend");
 
 const renderDataBackend = async() => {
  
-        const data = await fetch.fetchData("https://p2-henrybootcamp-production.up.railway.app/movies");
+        const data = await fetch.fetchData("https://fancy-cummerbund-jay.cyclic.app/movies");
 
   data.forEach((pelicula) => {
     var anchor = d.createElement("a");
