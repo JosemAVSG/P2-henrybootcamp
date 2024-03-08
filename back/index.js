@@ -1,8 +1,9 @@
 const dbConnect = require("./src/db");
 const app = require("./src/server");
-const PORT = process.env.PORT || 8080;
+const PORT = process.env.PORT || 3000;
 
-dbConnect();
-app.listen(PORT,()=>{
-    console.log("Ejecutandose en el puerto 3000")
+dbConnect().then(() => {
+    app.listen(PORT, () => {
+        console.log("listening for requests");
+    })
 })
