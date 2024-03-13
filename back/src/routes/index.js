@@ -8,7 +8,7 @@ const router = Router();
 router.get("/movies", getMovies)
 router.get("/moviesDb", getMoviesDb)
 router.get("/moviesDb/:id",getMovieDb)
-router.post("/moviesDb",validateSchema(zodMovieSchema),validateMovie,createMovieDB)
+router.post("/moviesDb",validateSchema(zodMovieSchema.zodMovieSchema),validateMovie,createMovieDB)
 router.delete("/moviesDb/:id",deleteMovieDb)
 router.put("/moviesDb/:id",validateMovie, updateMovieDb)
 module.exports = router;
