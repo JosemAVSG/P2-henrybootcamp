@@ -5,9 +5,9 @@ const renderSeries = () => {
     seriesData.forEach((serie) => {
       // Crear una tarjeta para cada película
   
-      var anchor = document.createElement("a");
+      let anchor = document.createElement("a");
       anchor.setAttribute("href", "#");
-      var card = document.createElement("div");
+      let card = document.createElement("div");
       card.classList.add("card");
       card.innerHTML = `
                 <img src=${serie.poster}/>

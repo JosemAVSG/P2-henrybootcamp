@@ -3,8 +3,8 @@ const MovieDB = require("../models/movieModel");
 const movies = [
   new Movie(
     "Guardians of the Galaxy Vol. 2",
-    2017,
     "James Gunn",
+    2017,
     "2h 16min",
     ["Action", "Adventure", "Comedy"],
     7.7,
@@ -13,8 +13,8 @@ const movies = [
   ),
   new Movie(
     "Star Wars: Episode IV - A New Hope",
-    1977,
     "George Lucas",
+    1977,
     "2h 1min",
     ["Action", "Adventure", "Fantasy", "Sci-Fi"],
     8.7,
@@ -22,8 +22,8 @@ const movies = [
   ),
   new Movie(
     "The Lord of the Rings: The Fellowship of the Ring",
-    2001,
     "Peter Jackson",
+    2001,
     "2h 58min",
     ["Action", "Adventure", "Drama", "Fantasy"],
     8.8,
@@ -32,8 +32,8 @@ const movies = [
   ),
   new Movie(
     "The Shawshank Redemption",
-    1994,
     "Frank Darabont",
+    1994,
     "2h 22min",
     ["Drama"],
     9.3,
@@ -42,8 +42,8 @@ const movies = [
   ),
   new Movie(
     "Inception",
-    2010,
     "Christopher Nolan",
+    2010,
     "2h 28min",
     ["Action", "Adventure", "Sci-Fi", "Thriller"],
     8.8,
@@ -52,8 +52,8 @@ const movies = [
   ),
   new Movie(
     "The Matrix",
-    1999,
     "Lana Wachowski, Lilly Wachowski",
+    1999,
     "2h 16min",
     ["Action", "Sci-Fi"],
     8.7,
@@ -61,6 +61,40 @@ const movies = [
   ),
 ];
 
+const getMovie= async (req, res) => {
+  try {
+      const movie = await MovieDB.findById(req.params.id);
+    return movie;
+  } catch (error) {
+      res.status(500).json({ message: error.message });
+  }
+};
+
+const updateMovie = async (req, res) => {
+  try {
+    const updatedMovie = await MovieDB.findByIdAndUpdate(
+      req.params.id,
+      req.body,
+      { new: true }
+    );
+    if (!updatedMovie) {
+      return res.status(404).json({ message: "Producto no encontrado" });
+    }
+    res.json(updatedMovie);
+  } catch (error) {
+    return error
+  }
+};
+
+
+const deleteMovie = async (req, res) => {
+  try {
+    const deletedMovie = await MovieDB.findByIdAndDelete(req.params.id);
+    return deletedMovie
+  } catch (error) {
+    return error
+  }
+};
 const createMovie = async (req) => {
   const { title, year, director, duration, genre, rate, poster } = req.body;
   const newMovie = new MovieDB({
@@ -96,5 +130,8 @@ const getAllMovies = () => {
 module.exports = {
   getAllMovies,
   getAllMoviesDb,
-  createMovie
+  createMovie,
+  deleteMovie,
+  updateMovie,
+  getMovie
 };

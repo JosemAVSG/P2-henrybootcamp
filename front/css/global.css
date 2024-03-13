@@ -277,6 +277,18 @@ nav a:hover:after {
 .banner {
   padding: 20px;
 }
+#mensaje{
+  visibility: hidden;
+  display: flex;
+  margin: 20px auto;
+  padding: 30px;
+  width: 60%;
+  color: white;
+  font-size: 20px;
+}
+#mensaje p{
+  margin: 0 auto;
+}
 footer {
   display: flex;
   padding: 10px 0;

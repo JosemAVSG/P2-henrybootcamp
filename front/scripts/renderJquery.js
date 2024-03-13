@@ -8,9 +8,9 @@ const renderMoviesAjax = () => {
   if(status === "success"){
      data.forEach((pelicula) => {
 
-    var anchor = document.createElement("a");
+    let anchor = document.createElement("a");
     anchor.setAttribute("href", "#");
-    var card = document.createElement("div");
+    let card = document.createElement("div");
     card.classList.add("card");
 
     card.innerHTML = `

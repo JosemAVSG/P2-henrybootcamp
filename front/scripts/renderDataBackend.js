@@ -7,9 +7,9 @@ const renderDataBackend = async() => {
         const data = await fetch.fetchData("https://fancy-cummerbund-jay.cyclic.app/movies");
 
   data.forEach((pelicula) => {
-    var anchor = d.createElement("a");
+    let anchor = d.createElement("a");
     anchor.setAttribute("href", "#");
-    var card = d.createElement("div");
+    let card = d.createElement("div");
     card.classList.add("card");
 
     card.innerHTML = `
