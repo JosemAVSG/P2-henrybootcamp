@@ -1,6 +1,6 @@
 const z = require("zod");
 
-const zodMovieSchema = z.object({
+const MovieSchemaZod = z.object({
     title: z.string(),
     year: z.number(),
     director: z.string(),
@@ -10,4 +10,4 @@ const zodMovieSchema = z.object({
     poster: z.string(),
 })
 
-module.exports = {zodMovieSchema}
+module.exports = MovieSchemaZod
