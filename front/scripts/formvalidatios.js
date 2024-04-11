@@ -19,7 +19,6 @@ function formulario() {
         const rate = parseFloat(document.getElementById('rate').value);
         const duration = document.getElementById('duration').value;
         const poster = document.getElementById('poster').value;
-        
         if (title && director && year && genre && rate && duration && poster ) {  
             
             try {

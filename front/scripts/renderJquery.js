@@ -2,7 +2,7 @@ const d=document;
 const server = d.getElementById("server")
 const renderMoviesAjax = () => {
 
-  $.get("https://students-api.2.us-1.fl0.io/movies",(data,status)=>{
+  $.get("https://students-api.up.railway.app/movies",(data,status)=>{
   console.log(data);
   console.log(status);
   if(status === "success"){
