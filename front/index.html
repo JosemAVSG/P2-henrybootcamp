@@ -6,6 +6,13 @@
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link
+      type="image/png"
+      sizes="96x96"
+      rel="icon"
+      href="./public/icons8-movie-gradient-96.png"
+    />
+
+    <link
       href="https://fonts.googleapis.com/css2?family=Roboto+Slab&display=swap"
       rel="stylesheet"
     />
@@ -56,87 +63,201 @@
         </div>
         <section id="mongo"></section>
         <!-- Agrega este modal en tu HTML -->
-<div class="modal fade" id="actionModal" tabindex="-1" aria-labelledby="actionModalLabel" aria-hidden="true">
-  <div class="modal-dialog modal-dialog-centered">
-      <div class="modal-content">
-          <div class="modal-header">
-              <h5 class="modal-title" id="actionModalLabel">¿Qué acción deseas realizar?</h5>
-              <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
-          </div>
-          <div class="modal-body">
-              <p>Selecciona una opción para la película:</p>
-              <button type="button" class="btn btn-primary" id="updateActionBtn">Actualizar</button>
-              <button type="button" class="btn btn-danger" id="deleteActionBtn">Eliminar</button>
-          </div>
-      </div>
-  </div>
-</div>
-<!-- Modal para eliminar la película -->
-<div class="modal fade" id="deleteModal" tabindex="-1" aria-labelledby="deleteModalLabel" aria-hidden="true">
-  <div class="modal-dialog modal-dialog-centered">
-      <div class="modal-content">
-          <div class="modal-header">
-              <h5 class="modal-title" id="deleteModalLabel">Eliminar Película</h5>
-              <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
-          </div>
-          <div class="modal-body">
-              <p>¿Estás seguro de que deseas eliminar la película? "<span id="movieTitle"></span>"</p>
-          </div>
-          <div class="modal-footer">
-              <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Cancelar</button>
-              <button type="button" class="btn btn-danger" id="confirmDeleteBtn">Eliminar</button>
-          </div>
-      </div>
-  </div>
-</div>
-<!-- Modal para actualizar la película -->
-<div class="modal fade" id="updateModal" tabindex="-1" aria-labelledby="updateModalLabel" aria-hidden="true">
-  <div class="modal-dialog modal-dialog-centered">
-      <div class="modal-content">
-          <div class="modal-header">
-              <h5 class="modal-title" id="updateModalLabel">Actualizar Película</h5>
-              <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
-          </div>
-          <div class="modal-body">
-            <form id="movieForm">
-              <div class="form-group">
-                <label for="title">Título:</label>
-                <input type="text" id="title" class="form-control" required />
+        <div
+          class="modal fade"
+          id="actionModal"
+          tabindex="-1"
+          aria-labelledby="actionModalLabel"
+          aria-hidden="true"
+        >
+          <div class="modal-dialog modal-dialog-centered">
+            <div class="modal-content">
+              <div class="modal-header">
+                <h5 class="modal-title" id="actionModalLabel">
+                  ¿Qué acción deseas realizar?
+                </h5>
+                <button
+                  type="button"
+                  class="btn-close"
+                  data-bs-dismiss="modal"
+                  aria-label="Close"
+                ></button>
               </div>
-              <div class="form-group">
-                <label for="year">Año:</label>
-                <input class="form-control" type="number" id="year" required />
+              <div class="modal-body">
+                <p>Selecciona una opción para la película:</p>
+                <button
+                  type="button"
+                  class="btn btn-primary"
+                  id="updateActionBtn"
+                >
+                  Actualizar
+                </button>
+                <button
+                  type="button"
+                  class="btn btn-danger"
+                  id="deleteActionBtn"
+                >
+                  Eliminar
+                </button>
               </div>
-              <div class="form-group">
-                <label for="director">Director:</label>
-                <input class="form-control" type="text" id="director" required />
-              </div>
-              <div class="form-group">
-                <label for="duration">Duration:</label>
-                <input class="form-control" type="text" id="duration" required />
-              </div>
-              <div class="form-group">
-                <label for="genre">Género:</label>
-                <input class="form-control" type="text" id="genre" required />
-              </div>
-              <div class="form-group">
-                <label for="rate">Rate:</label>
-                <input class="form-control" type="text" id="rate" required />
-              </div>
-              <div class="form-group">
-                <label for="poster">Link de imagen:</label>
-                <input class="form-control" type="text" id="poster" required />
-              </div>
-            </form>
+            </div>
           </div>
-          <div class="modal-footer">
-              <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Cancelar</button>
-              <button type="button" class="btn btn-primary" id="confirmUpdateBtn">Actualizar</button>
+        </div>
+        <!-- Modal para eliminar la película -->
+        <div
+          class="modal fade"
+          id="deleteModal"
+          tabindex="-1"
+          aria-labelledby="deleteModalLabel"
+          aria-hidden="true"
+        >
+          <div class="modal-dialog modal-dialog-centered">
+            <div class="modal-content">
+              <div class="modal-header">
+                <h5 class="modal-title" id="deleteModalLabel">
+                  Eliminar Película
+                </h5>
+                <button
+                  type="button"
+                  class="btn-close"
+                  data-bs-dismiss="modal"
+                  aria-label="Close"
+                ></button>
+              </div>
+              <div class="modal-body">
+                <p>
+                  ¿Estás seguro de que deseas eliminar la película? "<span
+                    id="movieTitle"
+                  ></span
+                  >"
+                </p>
+              </div>
+              <div class="modal-footer">
+                <button
+                  type="button"
+                  class="btn btn-secondary"
+                  data-bs-dismiss="modal"
+                >
+                  Cancelar
+                </button>
+                <button
+                  type="button"
+                  class="btn btn-danger"
+                  id="confirmDeleteBtn"
+                >
+                  Eliminar
+                </button>
+              </div>
+            </div>
           </div>
-      </div>
-  </div>
-</div>
-
+        </div>
+        <!-- Modal para actualizar la película -->
+        <div
+          class="modal fade"
+          id="updateModal"
+          tabindex="-1"
+          aria-labelledby="updateModalLabel"
+          aria-hidden="true"
+        >
+          <div class="modal-dialog modal-dialog-centered">
+            <div class="modal-content">
+              <div class="modal-header">
+                <h5 class="modal-title" id="updateModalLabel">
+                  Actualizar Película
+                </h5>
+                <button
+                  type="button"
+                  class="btn-close"
+                  data-bs-dismiss="modal"
+                  aria-label="Close"
+                ></button>
+              </div>
+              <div class="modal-body">
+                <form id="movieForm">
+                  <div class="form-group">
+                    <label for="title">Título:</label>
+                    <input
+                      type="text"
+                      id="title"
+                      class="form-control"
+                      required
+                    />
+                  </div>
+                  <div class="form-group">
+                    <label for="year">Año:</label>
+                    <input
+                      class="form-control"
+                      type="number"
+                      id="year"
+                      required
+                    />
+                  </div>
+                  <div class="form-group">
+                    <label for="director">Director:</label>
+                    <input
+                      class="form-control"
+                      type="text"
+                      id="director"
+                      required
+                    />
+                  </div>
+                  <div class="form-group">
+                    <label for="duration">Duration:</label>
+                    <input
+                      class="form-control"
+                      type="text"
+                      id="duration"
+                      required
+                    />
+                  </div>
+                  <div class="form-group">
+                    <label for="genre">Género:</label>
+                    <input
+                      class="form-control"
+                      type="text"
+                      id="genre"
+                      required
+                    />
+                  </div>
+                  <div class="form-group">
+                    <label for="rate">Rate:</label>
+                    <input
+                      class="form-control"
+                      type="text"
+                      id="rate"
+                      required
+                    />
+                  </div>
+                  <div class="form-group">
+                    <label for="poster">Link de imagen:</label>
+                    <input
+                      class="form-control"
+                      type="text"
+                      id="poster"
+                      required
+                    />
+                  </div>
+                </form>
+              </div>
+              <div class="modal-footer">
+                <button
+                  type="button"
+                  class="btn btn-secondary"
+                  data-bs-dismiss="modal"
+                >
+                  Cancelar
+                </button>
+                <button
+                  type="button"
+                  class="btn btn-primary"
+                  id="confirmUpdateBtn"
+                >
+                  Actualizar
+                </button>
+              </div>
+            </div>
+          </div>
+        </div>
       </div>
       <div class="content">
         <div class="banner">

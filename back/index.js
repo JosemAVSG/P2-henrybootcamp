@@ -6,4 +6,6 @@ dbConnect().then(() => {
     app.listen(PORT, () => {
         console.log("listening for requests");
     })
+}).catch((error) => {
+    console.log(error);
 })
